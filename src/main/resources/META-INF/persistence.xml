@@ -1,0 +1,39 @@
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+	version="2.2">
+
+	<persistence-unit name="miniBanco"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<class>org.cursobbva.jbreard.lab1.Ciudad</class>
+		<class>org.cursobbva.jbreard.lab1.Cliente</class>
+		<class>org.cursobbva.jbreard.lab1.Provincia</class>
+		<class>org.cursobbva.jbreard.lab1.CuentaMonedaNacional</class>
+		<class>org.cursobbva.jbreard.lab1.CuentaMonedaNacionalExtranjera</class>
+		<class>org.cursobbva.jbreard.lab1.Direccion</class>
+		<class>org.cursobbva.jbreard.lab1.Moneda</class>
+		<class>org.cursobbva.jbreard.lab1.MovimientoDeposito</class>
+		<class>org.cursobbva.jbreard.lab1.MovimientoMonedaExtranjeraCompra</class>
+		<class>org.cursobbva.jbreard.lab1.MovimientoMonedaExtranjeraVenta</class>
+		<class>org.cursobbva.jbreard.lab1.MovimientoTransferenciaRecibida</class>
+		<class>org.cursobbva.jbreard.lab1.MovimientoTransferenciaRealizada</class>
+		
+		<properties>
+		<!--		<property name="jakarta.persistence.jdbc.driver"-->
+			<property name="javax.persistence.jdbc.driver"
+				value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:h2:tcp://localhost/~/test" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+				
+		</properties>
+	</persistence-unit>
+
+</persistence>
